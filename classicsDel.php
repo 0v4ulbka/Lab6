@@ -1,6 +1,14 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Удалить</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 <?php
 session_start();
-require_once 'dbConnect.php';
+require_once 'config/dbConnect.php';
 require_once 'functions.php';
 if (!empty($_POST['del'])) {
     $id = (int)$_GET['id'];
@@ -8,8 +16,12 @@ if (!empty($_POST['del'])) {
     $res = query($query, $mysqli);
     header('Location: classicsView.php');
 } ?>
-<p>Вы уверены, что хотите удалить?</p>
+<h1>Вы уверены, что хотите удалить?</h1>
 <form method="post">
-    <input type="submit" name="del" value="Удалить">
-    <a href="classicsView.php">Назад</a>
+    <div>
+        <input class="button" type="submit" name="del" value="Удалить">
+        <a href="classicsView.php">Назад</a>
+    </div>
 </form>
+</body>
+</html>
