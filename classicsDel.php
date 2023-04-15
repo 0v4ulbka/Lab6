@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'dbConnect.php';
 require_once 'functions.php';
 if (!empty($_POST['del'])) {
