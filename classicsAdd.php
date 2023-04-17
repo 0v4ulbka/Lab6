@@ -10,7 +10,7 @@
 session_start();
 require_once 'config/dbConnect.php';
 require_once 'functions.php';
-if (!empty($_POST['submit'])) {
+if (!empty($_POST['submit']) && $_POST['submit'] == 'Добавить') {
     $author = strip_tags($_POST['author']);
     $title = strip_tags($_POST['title']);
     $type = strip_tags($_POST['type']);

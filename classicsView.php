@@ -25,7 +25,7 @@ $query = "SELECT * FROM classics";
 $res = query($query, $mysqli);
 while ($row = mysqli_fetch_assoc($res)) {
     ?>
-    <div>
+    <div class="block">
         <h2><?= $row['title']; ?>
             <?php if($_SESSION && !empty($_SESSION)){ ?>
                 <a href="classicsDel.php?id=<?= $row['id']?>">Удалить</a>
