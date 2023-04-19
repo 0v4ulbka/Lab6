@@ -28,7 +28,7 @@ if (!empty($_POST['submit'])) {
     <label><p>Логин</p><input type="text" name="login"></label>
     <label><p>Пароль</p><input type="password" name="password"></label>
     <div>
-        <input class="button" type="submit" name="submit" value="Зарегистрироваться">
+        <input class="button" type="submit" name="submit" value="Регистрация">
         <a href="../classicsView.php">Назад</a>
     </div>
 </form>
